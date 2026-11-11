@@ -32,7 +32,7 @@ body.open-cert{align-items:flex-start;padding:24px 8px 32px}
 </div>
 </div>
 <script>
-const steps=["Я хочу сделать твой день ярче","Я хочу, чтоб ты сегодня кайфанула чисто для себя и перезагрузилась","Я скучаю"];
+const steps=["Я хочу сделать твой день ярче","Я хочу, чтоб ты кайфанула чисто для себя и перезагрузилась","Я скучаю"];
 let i=0;const env=document.getElementById('env'),msg=document.getElementById('msg'),hint=document.getElementById('hint');
 env.onclick=()=>{if(i<steps.length){msg.textContent=steps[i];msg.classList.remove('fade');void msg.offsetWidth;msg.classList.add('fade');i++;hint.textContent=i<steps.length?'открой ещё раз':'открой последний раз';}else{env.style.display='none';document.getElementById('cert').style.display='block';document.body.classList.add('open-cert');}};
 const s=new URLSearchParams(location.search).get('step');if(s){for(let k=0;k<+s;k++)env.click();}
